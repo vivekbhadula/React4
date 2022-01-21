@@ -1,0 +1,32 @@
+.form-head {
+    width: 100%;
+    max-width: 750px;
+    margin: 50px auto;
+    padding: 25px;
+}
+
+.form-component {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-component label {
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
+
+.form-component input {
+    font-size: 25px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    border: 1px solid #e5e5e5;
+    font-weight: 400;
+}
+
+.form-head input:focus {
+    background: burlywood;
+    border: 1px solid rgb(39, 34, 29);
+}
