@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import Button from "../UI/Button";
 import styles from "./AddUser.module.css";
 
-function AddUser() {
+function AddUser(props) {
   const [nameChange, setNameChange] = useState("");
   const [ageChange, setAgeChange] = useState("");
   const [sexChange, setSexChange] = useState("");
@@ -29,10 +29,14 @@ function AddUser() {
     ) {
       return;
     }
-    if (ageChange.value <= 0) {
+    if (+ageChange <= 0) {
       return;
     }
-    console.log(nameChange, sexChange, ageChange);
+    console.log(nameChange, sexChange, ageChange, typeof(+ageChange));
+    props.onAddUser(nameChange, ageChange, sexChange);
+    setNameChange("");
+    setAgeChange("");
+    setSexChange("");
   }
 
   return (
